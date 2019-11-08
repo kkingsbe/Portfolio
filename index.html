@@ -10,129 +10,31 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <style>
-      html, body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        height: 100%;
-        width: 100%;
-        position: relative;
-
-      }
-      .background-image {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        background: url("res/snowy_mountains.jpeg") no-repeat center center fixed;
-        background-size: 100% 100%;
-      }
-      .background-image::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(3, 29, 77, 0.473);
-      }
-      .greeting {
-        font-family: "Roboto", sans-serif;
-        color: white;
-      }
-      .greeting h1 {
-        font-size: 40px;
-      }
-      .content {
-        position: absolute;
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 1fr;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
-      }
-      .navigation {
-        grid-column: 1;
-        display: flex;
-        flex-direction: column;
-        background: rgb(17, 17, 17);
-        grid-row: 1;
-      }
-      .navigation button {
-        background: transparent;
-        border: transparent;
-        border-bottom-color: whitesmoke;
-        border-bottom-width: 1px;
-        margin: 10px;
-        color: white;
-        font-size: 20px;
-        padding: 10px;
-        cursor: pointer;
-      }
-      .bio {
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-      }
-      .profile-picture {
-        width: 200px;
-        height: 200px;
-      }
-      .profile-picture img {
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-      }
-      .summary {
-        font-size: 30px;
-        color: white;
-        max-width: 60%;
-        background: linear-gradient(45deg, #195151, #00223E);
-        padding-left: 15px;
-        border-radius: 10px;
-        margin-top: 10px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-      }
-    </style>
+    <script src="js/navbar.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="background-image"></div>
       <div class="content">
-        <div class="navigation">
-          <button>Home</button>
-          <button>Programming</button>
-          <button>Photography</button>
-          <button>3D Design</button>
-          <button>Aviation</button>
+        <div id="navigation" class="navigation">
+          <a class="nav-active">Home</a>
+          <a href="programming.html">Programming</a>
+          <a href="photography.html">Photography</a>
+          <a href="design.html">3D Design</a>
+          <a href="aviation.html">Aviation</a>
         </div>
         <div class="bio">
           <div class="profile-picture">
-            <img src="res/profile_picture_cropped.jpg"></img>
+            <img src="res/profile_picture_cropped2.jpg"></img>
           </div>
           <div class="summary">
-            <p>Hi, im Kyle.<br>I am currently a high school senior by day, and a Software Developer / IT Consultant by night. Check out my website to follow along on my adventures as a pilot, programmer, photographer, and CAD designer.</p>
+            <p>Hi, I'm Kyle.<br>I am currently a high school senior by day, and a Software Developer / IT Consultant by night. Check out my website to follow along on my adventures as a pilot, programmer, photographer, and CAD designer.</p>
           </div>
         </div>
       </div>
-    <!--
-    <div id="greeting" class="greeting">
-      <h1>Hi, im Kyle</h1>
-    </div>
-    -->
     </div>
   </body>
 </html>

@@ -1,0 +1,108 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.background-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url("../res/snowy_mountains.jpeg") no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+.background-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 29, 77, 0.473);
+}
+.greeting h1 {
+  font-size: 40px;
+}
+.content {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 1fr;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+@media only screen and (max-width: 1400px) {
+  .content {
+    grid-template-columns: 15% 85%;
+  }
+}
+.navigation {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgb(17, 17, 17);
+  grid-row: 1;
+}
+.navigation a {
+  background: transparent;
+  border: transparent;
+  border-bottom-color: whitesmoke;
+  border-bottom-width: 1px;
+  margin: 10px;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.nav-active {
+  background-color: #f7b42c !important;
+  background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%) !important;
+}
+.bio {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.profile-picture {
+  width: 200px;
+  height: 200px;
+}
+.profile-picture img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.summary {
+  font-size: 30px;
+  color: white;
+  color: white;
+  max-width: 60%;
+  background: linear-gradient(45deg, #195151, #00223E);
+  padding-left: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 5fr;
+}
