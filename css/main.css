@@ -103,6 +103,8 @@ html, body {
 }
 .gallery {
   display: grid;
+  margin-left: 10%;
+  margin-right: 10%:
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(5, auto);
   grid-gap: 10px;
